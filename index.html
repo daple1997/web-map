@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Map</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet.pinsearch/src/Leaflet.PinSearch.css" crossorigin=""></script>
+    </head>
+    <body>
+    <div id="map"></div>
+    <div id="search">
+        <form id="searchForm">
+            <textarea id="searchInput" name="searchInput" rows="3" cols="40" placeholder="Search for a feature..."></textarea>
+            <button id="searchButton" onclick="searchFeatures()">Search</button>
+        </form>
+    </div>
+    <div id="multiLineTextModal" class="modal">
+        <div class="modal-content">
+            <h2>Enter Feature Text</h2>
+            <textarea id="featureText" rows="4" cols="50"></textarea><br>
+            <button onclick="saveFeatureText()">Save</button>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    <script src="script.js"></script>
+    </body>
+</html>
